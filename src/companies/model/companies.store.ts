@@ -6,10 +6,11 @@ interface State {
   isLoading: boolean
   progress: number
   total: number
+  timeRequest: number
 }
 
 export const useCompaniesStore = defineStore('companies', {
-  state: (): State => ({ companies: [], isLoading: false, progress: 0, total: 0 }),
+  state: (): State => ({ companies: [], isLoading: false, progress: 0, total: 0, timeRequest: 0 }),
   actions: {
     setTotal(total: number) {
       this.total = total
@@ -26,6 +27,11 @@ export const useCompaniesStore = defineStore('companies', {
     finishLoading() {
       this.isLoading = false
       this.progress = 100
+    },
+    clearCompanies() {
+      this.companies = []
+      this.total = 0
+      this.progress = 0
     },
   },
 })
