@@ -1,15 +1,20 @@
+<script setup lang="ts">
+import readme from '../../README.md?raw'
+import { marked } from 'marked'
+
+const html = marked(readme)
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div v-html="html" class="prose"></div>
   </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 60px 0 80px;
   }
 }
 </style>
