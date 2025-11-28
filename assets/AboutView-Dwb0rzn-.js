@@ -1,4 +1,4 @@
-import{d as fe,c as xe,a as be,u as me,o as we}from"./index-ByZzW2Dt.js";const ye=`# README — Vue 3 + TypeScript Bitrix Webhook Demo
+import{d as fe,c as xe,a as be,u as me,o as we}from"./index-0E-LWBEN.js";const ye=`# README — Vue 3 + TypeScript Bitrix Webhook Demo
 
 ## Overview
 
